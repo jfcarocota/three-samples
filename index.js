@@ -19,7 +19,13 @@ scene.add( cube );
 
 camera.position.z = 5;
 
-const animate = ()=> {
+renderer.setAnimationLoop(()=>{
+  /*cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;*/
+  renderer.render( scene, camera );
+});
+
+//const animate = ()=> {
   /*requestAnimationFrame( animate );
 
   cube.rotation.x += 0.01;
@@ -27,11 +33,11 @@ const animate = ()=> {
 
   renderer.render( scene, camera );*/
 
-  renderer.setAnimationLoop(()=>{
-    cube.rotation.x += 0.01;
-    cube.rotation.y += 0.01;
-    renderer.render( scene, camera );
+  //renderer.setAnimationLoop(()=>{
+    /*cube.rotation.x += 0.01;
+    cube.rotation.y += 0.01;*/
+    /*renderer.render( scene, camera );
   });
 };
 
-animate();
+animate();*/
