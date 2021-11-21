@@ -20,11 +20,18 @@ scene.add( cube );
 camera.position.z = 5;
 
 renderer.setAnimationLoop(()=>{
-  /*cube.rotation.x += 0.01;
-  cube.rotation.y += 0.01;*/
+  cube.rotation.x += 0.01;
+  cube.rotation.y += 0.01;
   renderer.render( scene, camera );
 });
 
+
+const animate = ()=>{
+  renderer.setAnimationLoop(renderer.render( scene, camera ));
+	requestAnimationFrame(animate);
+}
+
+animate()
 //const animate = ()=> {
   /*requestAnimationFrame( animate );
 
