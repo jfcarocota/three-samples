@@ -1,4 +1,4 @@
-import * as THREE from './js/build/three.module.js'
+import * as THREE from './js/build/three.module.js';
 import { BoxLineGeometry } from './js/examples/jsm/geometries/BoxLineGeometry.js';
 import { VRButton } from './js/examples/jsm/webxr/VRButton.js';
 import { XRControllerModelFactory } from './js/examples/jsm/webxr/XRControllerModelFactory.js';
