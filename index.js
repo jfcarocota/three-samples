@@ -1,5 +1,5 @@
 import * as THREE from './js/build/three.module.js';
-import { BoxLineGeometry } from './js/examples/jsm/geometries/BoxLineGeometry.js';
+//import { BoxLineGeometry } from './js/examples/jsm/geometries/BoxLineGeometry.js';
 import { VRButton } from './js/examples/jsm/webxr/VRButton.js';
 
 const clock = new THREE.Clock();
@@ -24,10 +24,10 @@ function init() {
   camera.position.set( 0, 1.6, 5 );
   scene.add( camera );
 
-  room = new THREE.LineSegments(
+  /*room = new THREE.LineSegments(
     new BoxLineGeometry( 6, 6, 6, 10, 10, 10 ).translate( 0, 3, 0 ),
     new THREE.LineBasicMaterial( { color: 0x808080 } )
-  );
+  );*/
 
   scene.add( new THREE.HemisphereLight( 0x606060, 0x404040 ) );
 
