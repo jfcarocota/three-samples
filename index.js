@@ -241,9 +241,9 @@ function render() {
 
     }
 
-    cube.rotation.x += cube.userData.velocity.x * 2 * delta;
-    cube.rotation.y += cube.userData.velocity.y * 2 * delta;
-    cube.rotation.z += cube.userData.velocity.z * 2 * delta;
+    //cube.rotation.x += cube.userData.velocity.x * 2 * delta;
+    //cube.rotation.y += cube.userData.velocity.y * 2 * delta;
+    //cube.rotation.z += cube.userData.velocity.z * 2 * delta;
 
   }
 
