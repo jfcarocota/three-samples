@@ -32,7 +32,7 @@ function init() {
   const geometry = new THREE.BoxGeometry();
   const material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
   const cube = new THREE.Mesh( geometry, material );
-  cube.position.set(0, 1, -30)
+  cube.position.set(0, 1, -5)
   scene.add( cube );
 
   renderer = new THREE.WebGLRenderer( { antialias: true } );
