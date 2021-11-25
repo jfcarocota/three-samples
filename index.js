@@ -33,7 +33,7 @@ function init() {
     new BoxLineGeometry( 6, 6, 6, 10, 10, 10 ).translate( 0, 3, 0 ),
     new THREE.LineBasicMaterial( { color: 0x808080 } )
   );
-  scene.add( room );
+  //scene.add( room );
 
   scene.add( new THREE.HemisphereLight( 0x606060, 0x404040 ) );
 
