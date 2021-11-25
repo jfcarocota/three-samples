@@ -10,7 +10,7 @@ let camera, scene, raycaster, renderer;
 
 let room;
 
-let controller, controllerGrip;
+//let controller, controllerGrip;
 
 init();
 animate();
@@ -65,7 +65,7 @@ function init() {
 
   }
 
-  controller = renderer.xr.getController( 0 );
+  /*controller = renderer.xr.getController( 0 );
   controller.addEventListener( 'selectstart', onSelectStart );
   controller.addEventListener( 'selectend', onSelectEnd );
   controller.addEventListener( 'connected', function ( event ) {
@@ -84,7 +84,7 @@ function init() {
 
   controllerGrip = renderer.xr.getControllerGrip( 0 );
   controllerGrip.add( controllerModelFactory.createControllerModel( controllerGrip ) );
-  scene.add( controllerGrip );
+  scene.add( controllerGrip );*/
 
   window.addEventListener( 'resize', onWindowResize );
 
