@@ -183,7 +183,7 @@ function render() {
 
   // find intersections
 
-  tempMatrix.identity().extractRotation( controller.matrixWorld );
+  /*tempMatrix.identity().extractRotation( controller.matrixWorld );
 
   raycaster.ray.origin.setFromMatrixPosition( controller.matrixWorld );
   raycaster.ray.direction.set( 0, 0, - 1 ).applyMatrix4( tempMatrix );
@@ -208,7 +208,7 @@ function render() {
 
     INTERSECTED = undefined;
 
-  }
+  }*/
 
   // Keep cubes inside room
 
@@ -239,13 +239,13 @@ function render() {
       cube.position.z = THREE.MathUtils.clamp( cube.position.z, - 3, 3 );
       cube.userData.velocity.z = - cube.userData.velocity.z;
 
-    }*/
+    }
 
     //cube.rotation.x += cube.userData.velocity.x * 2 * delta;
     //cube.rotation.y += cube.userData.velocity.y * 2 * delta;
     //cube.rotation.z += cube.userData.velocity.z * 2 * delta;
 
-  }
+  }*/
 
   renderer.render( scene, camera );
 
