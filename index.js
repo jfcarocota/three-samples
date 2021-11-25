@@ -212,7 +212,7 @@ function render() {
 
   // Keep cubes inside room
 
-  for ( let i = 0; i < room.children.length; i ++ ) {
+  /*for ( let i = 0; i < room.children.length; i ++ ) {
 
     const cube = room.children[ i ];
 
@@ -239,7 +239,7 @@ function render() {
       cube.position.z = THREE.MathUtils.clamp( cube.position.z, - 3, 3 );
       cube.userData.velocity.z = - cube.userData.velocity.z;
 
-    }
+    }*/
 
     //cube.rotation.x += cube.userData.velocity.x * 2 * delta;
     //cube.rotation.y += cube.userData.velocity.y * 2 * delta;
