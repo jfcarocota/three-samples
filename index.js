@@ -21,7 +21,7 @@ function init() {
   scene.background = new THREE.Color( 0x505050 );
 
   camera = new THREE.PerspectiveCamera( 50, window.innerWidth / window.innerHeight, 0.1, 10 );
-  camera.position.set( 0, 1.6, 50 );
+  camera.position.set( 0, 1.6, 5 );
   scene.add( camera );
 
   room = new THREE.LineSegments(
@@ -39,7 +39,7 @@ function init() {
   const geometry = new THREE.BoxGeometry();
   const material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
   const cube = new THREE.Mesh( geometry, material );
-  cube.position.set(0, 1, -5)
+  //cube.position.set(0, 1, -5)
   scene.add( cube );
 
   renderer = new THREE.WebGLRenderer( { antialias: true } );
