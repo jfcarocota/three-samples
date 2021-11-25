@@ -167,7 +167,7 @@ function render() {
 
   const delta = clock.getDelta() * 60;
 
-  if ( controller.userData.isSelecting === true ) {
+  /*if ( controller.userData.isSelecting === true ) {
 
     const cube = room.children[ 0 ];
     room.remove( cube );
@@ -179,7 +179,7 @@ function render() {
     cube.userData.velocity.applyQuaternion( controller.quaternion );
     room.add( cube );
 
-  }
+  }*/
 
   // find intersections
 
