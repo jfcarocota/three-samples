@@ -29,21 +29,28 @@ function init() {
   camera.position.set( 0, 1.6, 3 );
   scene.add( camera );
 
-  room = new THREE.LineSegments(
+  /*room = new THREE.LineSegments(
     new BoxLineGeometry( 6, 6, 6, 10, 10, 10 ).translate( 0, 3, 0 ),
     new THREE.LineBasicMaterial( { color: 0x808080 } )
-  );
-  scene.add( room );
+  );*/
+  //scene.add( room );
 
-  scene.add( new THREE.HemisphereLight( 0x606060, 0x404040 ) );
+  //scene.add( new THREE.HemisphereLight( 0x606060, 0x404040 ) );
 
   const light = new THREE.DirectionalLight( 0xffffff );
   light.position.set( 1, 1, 1 ).normalize();
   scene.add( light );
 
-  const geometry = new THREE.BoxGeometry( 0.15, 0.15, 0.15 );
+const geometry = new THREE.BoxGeometry();
+const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+const cube = new THREE.Mesh( geometry, material );
+scene.add( cube );
 
-  for ( let i = 0; i < 200; i ++ ) {
+
+
+  //const geometry = new THREE.BoxGeometry( 0.15, 0.15, 0.15 );
+
+  /*for ( let i = 0; i < 200; i ++ ) {
 
     const object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
 
@@ -66,7 +73,7 @@ function init() {
 
     room.add( object );
 
-  }
+  }*/
 
   raycaster = new THREE.Raycaster();
 
@@ -167,7 +174,7 @@ function render() {
 
   const delta = clock.getDelta() * 60;
 
-  if ( controller.userData.isSelecting === true ) {
+  /*if ( controller.userData.isSelecting === true ) {
 
     const cube = room.children[ 0 ];
     room.remove( cube );
@@ -179,16 +186,16 @@ function render() {
     cube.userData.velocity.applyQuaternion( controller.quaternion );
     room.add( cube );
 
-  }
+  }*/
 
   // find intersections
 
-  tempMatrix.identity().extractRotation( controller.matrixWorld );
+  /*tempMatrix.identity().extractRotation( controller.matrixWorld );
 
   raycaster.ray.origin.setFromMatrixPosition( controller.matrixWorld );
-  raycaster.ray.direction.set( 0, 0, - 1 ).applyMatrix4( tempMatrix );
+  raycaster.ray.direction.set( 0, 0, - 1 ).applyMatrix4( tempMatrix );*/
 
-  const intersects = raycaster.intersectObjects( room.children, false );
+  /*const intersects = raycaster.intersectObjects( room.children, false );
 
   if ( intersects.length > 0 ) {
 
@@ -245,8 +252,9 @@ function render() {
     cube.rotation.y += cube.userData.velocity.y * 2 * delta;
     cube.rotation.z += cube.userData.velocity.z * 2 * delta;
 
-  }
-
+  }*/
+  cube.rotation.x += 0.01 * delta;
+  cube.rotation.y += 0.01 * delta;
   renderer.render( scene, camera );
 
 }
