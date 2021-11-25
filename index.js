@@ -41,9 +41,9 @@ function init() {
   light.position.set( 1, 1, 1 ).normalize();
   scene.add( light );
 
-  const geometry = new THREE.BoxGeometry( 0.15, 0.15, 0.15 );
+  //const geometry = new THREE.BoxGeometry( 0.15, 0.15, 0.15 );
 
-  for ( let i = 0; i < 200; i ++ ) {
+  /*for ( let i = 0; i < 200; i ++ ) {
 
     const object = new THREE.Mesh( geometry, new THREE.MeshLambertMaterial( { color: Math.random() * 0xffffff } ) );
 
@@ -66,7 +66,12 @@ function init() {
 
     room.add( object );
 
-  }
+  }*/
+
+  const geometry = new THREE.BoxGeometry();
+  const material = new THREE.MeshLambertMaterial( { color: 0x00ff00 } );
+  const cube = new THREE.Mesh( geometry, material );
+  scene.add( cube );
 
   raycaster = new THREE.Raycaster();
 
